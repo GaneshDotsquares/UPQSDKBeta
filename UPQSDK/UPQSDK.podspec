@@ -18,10 +18,11 @@ Pod::Spec.new do |spec|
   spec.homepage     = "http://EXAMPLE/MyFramework"
   spec.license      = "MIT"
   spec.author             = { "GaneshDotsquares" => "techdotsquares@gmail.com" }
-  spec.source       = { :path => '.' }
-  spec.source_files  = "UPQSDK"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source       = { git: => "https://github.com/GaneshDotsquares/UPQSDKBeta.git", :tag => "1.0.0"  }
+  spec.source_files  = "UPQSDK/**/*"
   spec.swift_version = "5" 
- spec.dependency 'SVProgressHUD'
+  spec.dependency 'SVProgressHUD'
+  spec.dependency 'Socket.IO-Client-Swift', '~> 14.0'
+  spec.dependency 'googleapis', :path => '.'
 end
 
